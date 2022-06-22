@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns:lr="http://adobe.com/lrg/0.0"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Makua Web</title>
+        <meta name="description" content="Favourz Pictures Gallery Of Austin Makua">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="assets/css/custom.css" >
+        <script src="assets/js/libs/modernizr.custom.23122.js"></script>
+    </head>
+    <body class=" row-spacing-none" data-pagination-style="scroll" data-target-row-height="211">
+                        <div id="thumbnailContainer">
+            <div class="thumbnails"></div>
+        </div>
+        <div id="loupeContainer" class="show-corners">
+            <div class="background"></div>
+            <div class="image-container"></div>    
+            <div class="side-navigation">
+                <div class="hotspot" id="hotspotPrevLoupe">
+                    <div class="button" id="buttonPrevSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconPrevSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve"><path class="icon custom-colorable" fill="#231F20" d="M0,0l0,50h50V0L0,0z M18.491,25.05l9.707-9.264c0.418-0.399,1.092-0.403,1.506-0.008l1.498,1.43c0.413,0.395,0.41,1.039-0.009,1.438l-6.765,6.456l6.613,6.31c0.41,0.392,0.414,1.024,0.008,1.412l-1.471,1.404c-0.406,0.387-1.068,0.384-1.479-0.008l-6.612-6.311L18.491,25.05z"/></svg>
+                    </div>
+                </div>
+                <div class="hotspot" id="hotspotNextLoupe">
+                    <div class="button" id="buttonNextSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconNextSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0v50h50V0H0z M28.513,27.909l-6.612,6.311c-0.411,0.392-1.073,0.395-1.479,0.008l-1.471-1.404 c-0.406-0.388-0.402-1.02,0.008-1.412l6.613-6.31l-6.765-6.456c-0.419-0.399-0.422-1.043-0.009-1.438l1.498-1.43 c0.414-0.395,1.088-0.391,1.506,0.008l9.707,9.264L28.513,27.909z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="lateral-nav-container">
+                <ul class="lateral-nav">
+                    <li id="buttonPrev">
+                        <svg version="1.1" id="svgIconPrevLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M25.20105,14.76864l-8.2004,7.773l2.5314,2.3992l5.5858,5.2952c0.3469,0.3289,0.9064,0.3318,1.2497,0.0065
+                                l1.2431-1.1783c0.3429-0.3252,0.3398-0.8555-0.0071-1.1846l-5.5864-5.2948l5.7149-5.4171c0.3535-0.3349,0.3568-0.875,0.0074-1.2063
+                                l-1.2657-1.1995C26.12435,14.43064,25.55435,14.43354,25.20105,14.76864z"/>
+                        </svg>
+                    </li>
+                    <li class="count"><span id="countCurrent"></span> of <span id="countTotal"></span></li>
+                    <li id="buttonNext">
+                        <svg version="1.1" id="svgIconNextLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M19.79895,14.76864l8.2004,7.773l-2.5314,2.3992l-5.5858,5.2952c-0.3469,0.3289-0.9064,0.3318-1.2497,0.0065
+                                l-1.2431-1.1783c-0.3429-0.3252-0.3398-0.8555,0.0071-1.1846l5.5864-5.2948l-5.7149-5.4171
+                                c-0.3535-0.3349-0.3568-0.875-0.0074-1.2063l1.2657-1.1995C18.87565,14.43064,19.44565,14.43354,19.79895,14.76864z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-container">
+                <div id="loupeMeta"></div>
+            </div>
+            <div id="loupeCloseButton">
+                <svg version="1.1" id="svgIconLoupeClose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                    <path class="shape-x custom-colorable" d="M14.77881,17.30074l5.212,5.2222l-5.0831,5.0924c-0.3476,0.3484-0.5746,0.7624-0.2308,1.1067l1.5682,1.4763
+                        c0.3436,0.3443,0.8045,0.2596,1.1521-0.0886l5.0825-5.093l5.2119,5.222c0.3536,0.3547,0.9244,0.3578,1.2741,0.0073l1.2677-1.27
+                        c0.3497-0.3507,0.3465-0.9224-0.0071-1.2768l-5.2119-5.2221l5.0828-5.0925c0.3475-0.3485,0.5429-0.8259,0.1994-1.1702
+                        l-1.6474-1.4921c-0.3438-0.3443-0.6936-0.1803-1.0411,0.1679l-5.0828,5.0929l-5.212-5.222
+                        c-0.3537-0.3546-0.9241-0.3577-1.2742-0.007l-1.2672,1.2698C14.42171,16.37464,14.42491,16.94624,14.77881,17.30074z"/>
+                </svg>
+            </div>
+        </div>
+        <script  defer type="text/javascript">
+            var LR = LR || {};
+            LR.images = [                                                                                        {"id": "388", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6015", "title": "", "caption" : ""},
+                         {"id": "389", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6018", "title": "", "caption" : ""},
+                         {"id": "390", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6019", "title": "", "caption" : ""},
+                         {"id": "391", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6020", "title": "", "caption" : ""},
+                         {"id": "392", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6021", "title": "", "caption" : ""},
+                         {"id": "393", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6022", "title": "", "caption" : ""},
+                         {"id": "394", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6032", "title": "", "caption" : ""},
+                         {"id": "395", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6040", "title": "", "caption" : ""},
+                         {"id": "396", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6041", "title": "", "caption" : ""},
+                         {"id": "397", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6042", "title": "", "caption" : ""},
+                         {"id": "398", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6043", "title": "", "caption" : ""},
+                         {"id": "399", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6044", "title": "", "caption" : ""},
+                         {"id": "400", "largeWidth": "1200", "largeHeight": "1163", "exportFilename": "IMG_6049", "title": "", "caption" : ""},
+                         {"id": "402", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6052", "title": "", "caption" : ""},
+                         {"id": "403", "largeWidth": "1200", "largeHeight": "938", "exportFilename": "IMG_6053", "title": "", "caption" : ""},
+                         {"id": "404", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6056", "title": "", "caption" : ""},
+                         {"id": "405", "largeWidth": "1200", "largeHeight": "805", "exportFilename": "IMG_6058", "title": "", "caption" : ""},
+                         {"id": "406", "largeWidth": "1133", "largeHeight": "1200", "exportFilename": "IMG_6059", "title": "", "caption" : ""},
+                         {"id": "407", "largeWidth": "874", "largeHeight": "1200", "exportFilename": "IMG_6061", "title": "", "caption" : ""},
+                         {"id": "408", "largeWidth": "1059", "largeHeight": "1200", "exportFilename": "IMG_6063", "title": "", "caption" : ""},
+                         {"id": "409", "largeWidth": "1200", "largeHeight": "864", "exportFilename": "IMG_6069", "title": "", "caption" : ""},
+                         {"id": "410", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6070", "title": "", "caption" : ""},
+                         {"id": "412", "largeWidth": "904", "largeHeight": "1200", "exportFilename": "IMG_6082", "title": "", "caption" : ""},
+                         {"id": "414", "largeWidth": "1200", "largeHeight": "786", "exportFilename": "IMG_6097", "title": "", "caption" : ""},
+                         {"id": "415", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6114", "title": "", "caption" : ""},
+                         {"id": "416", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6117", "title": "", "caption" : ""},
+                         {"id": "417", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6118", "title": "", "caption" : ""},
+                         {"id": "418", "largeWidth": "1200", "largeHeight": "766", "exportFilename": "IMG_6121", "title": "", "caption" : ""},
+                         {"id": "419", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6122", "title": "", "caption" : ""},
+                         {"id": "420", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6123", "title": "", "caption" : ""},
+                         {"id": "421", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6127", "title": "", "caption" : ""},
+                         {"id": "422", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6128-2", "title": "", "caption" : ""},
+                         {"id": "423", "largeWidth": "980", "largeHeight": "1200", "exportFilename": "IMG_6130", "title": "", "caption" : ""},
+                         {"id": "424", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6148-2", "title": "", "caption" : ""},
+                         {"id": "425", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6153", "title": "", "caption" : ""},
+                         {"id": "426", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6154", "title": "", "caption" : ""},
+                         {"id": "427", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6155", "title": "", "caption" : ""},
+                         {"id": "428", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6157", "title": "", "caption" : ""},
+                         {"id": "429", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6158", "title": "", "caption" : ""},
+                         {"id": "430", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6161", "title": "", "caption" : ""},
+                         {"id": "431", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6163", "title": "", "caption" : ""},
+                         {"id": "432", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6165", "title": "", "caption" : ""},
+                         {"id": "433", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6167", "title": "", "caption" : ""},
+                         {"id": "434", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6171", "title": "", "caption" : ""},
+                         {"id": "435", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6172", "title": "", "caption" : ""},
+                         {"id": "436", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6173", "title": "", "caption" : ""},
+                         {"id": "437", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6174", "title": "", "caption" : ""},
+                         {"id": "438", "largeWidth": "1200", "largeHeight": "833", "exportFilename": "IMG_6209", "title": "", "caption" : ""},
+                         {"id": "439", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6210", "title": "", "caption" : ""},
+                         {"id": "440", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6214", "title": "", "caption" : ""},
+                         {"id": "441", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6216", "title": "", "caption" : ""},
+                         {"id": "442", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6217", "title": "", "caption" : ""},
+                         {"id": "443", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6220", "title": "", "caption" : ""},
+                         {"id": "444", "largeWidth": "1200", "largeHeight": "983", "exportFilename": "IMG_6226", "title": "", "caption" : ""},
+                         {"id": "445", "largeWidth": "1200", "largeHeight": "1090", "exportFilename": "IMG_6227", "title": "", "caption" : ""},
+                         {"id": "446", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6231", "title": "", "caption" : ""},
+                         {"id": "447", "largeWidth": "865", "largeHeight": "1200", "exportFilename": "IMG_6236", "title": "", "caption" : ""},
+                         {"id": "448", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6239", "title": "", "caption" : ""},
+                         {"id": "449", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6240", "title": "", "caption" : ""},
+                         {"id": "450", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6241", "title": "", "caption" : ""},
+                         {"id": "451", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6243", "title": "", "caption" : ""},
+                         {"id": "452", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6244", "title": "", "caption" : ""},
+                         {"id": "453", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6247", "title": "", "caption" : ""},
+                         {"id": "454", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6248", "title": "", "caption" : ""},
+                         {"id": "455", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6250", "title": "", "caption" : ""},
+                         {"id": "456", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6251", "title": "", "caption" : ""},
+                         {"id": "457", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6252", "title": "", "caption" : ""},
+                         {"id": "458", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6255-2", "title": "", "caption" : ""},
+                         {"id": "459", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6263", "title": "", "caption" : ""},
+                         {"id": "460", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6264", "title": "", "caption" : ""},
+                         {"id": "461", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6267", "title": "", "caption" : ""},
+                         {"id": "462", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6271", "title": "", "caption" : ""},
+                         {"id": "463", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6272", "title": "", "caption" : ""},
+                         {"id": "464", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6273", "title": "", "caption" : ""},
+                         {"id": "465", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6274", "title": "", "caption" : ""},
+                         {"id": "466", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6275", "title": "", "caption" : ""},
+                         {"id": "467", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6276", "title": "", "caption" : ""},
+                         {"id": "468", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6277", "title": "", "caption" : ""},
+                         {"id": "469", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6283", "title": "", "caption" : ""},
+                         {"id": "470", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6286", "title": "", "caption" : ""},
+                         {"id": "471", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6290", "title": "", "caption" : ""},
+                         {"id": "472", "largeWidth": "913", "largeHeight": "1200", "exportFilename": "IMG_6292", "title": "", "caption" : ""},
+                         {"id": "473", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6294", "title": "", "caption" : ""},
+                         {"id": "474", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6295", "title": "", "caption" : ""},
+                         {"id": "475", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6297", "title": "", "caption" : ""},
+                         {"id": "476", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6299", "title": "", "caption" : ""},
+                         {"id": "477", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6302", "title": "", "caption" : ""},
+                         {"id": "478", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6305", "title": "", "caption" : ""},
+                         {"id": "479", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6307", "title": "", "caption" : ""},
+                         {"id": "480", "largeWidth": "1200", "largeHeight": "1041", "exportFilename": "IMG_6308", "title": "", "caption" : ""},
+                         {"id": "481", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6309", "title": "", "caption" : ""},
+                         {"id": "482", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6310", "title": "", "caption" : ""},
+                         {"id": "483", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6311", "title": "", "caption" : ""},
+                         {"id": "484", "largeWidth": "1200", "largeHeight": "872", "exportFilename": "IMG_6315", "title": "", "caption" : ""},
+                         {"id": "485", "largeWidth": "1200", "largeHeight": "822", "exportFilename": "IMG_6317", "title": "", "caption" : ""},
+                         {"id": "486", "largeWidth": "1200", "largeHeight": "889", "exportFilename": "IMG_6319", "title": "", "caption" : ""},
+                         {"id": "487", "largeWidth": "1200", "largeHeight": "912", "exportFilename": "IMG_6321", "title": "", "caption" : ""},
+                         {"id": "488", "largeWidth": "1200", "largeHeight": "840", "exportFilename": "IMG_6322", "title": "", "caption" : ""},
+                         {"id": "489", "largeWidth": "1200", "largeHeight": "835", "exportFilename": "IMG_6323", "title": "", "caption" : ""},
+                         {"id": "490", "largeWidth": "1200", "largeHeight": "867", "exportFilename": "IMG_6324", "title": "", "caption" : ""},
+                         {"id": "491", "largeWidth": "1200", "largeHeight": "883", "exportFilename": "IMG_6326", "title": "", "caption" : ""},
+                         {"id": "492", "largeWidth": "1200", "largeHeight": "911", "exportFilename": "IMG_6327", "title": "", "caption" : ""},
+                         {"id": "493", "largeWidth": "1200", "largeHeight": "923", "exportFilename": "IMG_6330", "title": "", "caption" : ""},
+                         {"id": "494", "largeWidth": "1200", "largeHeight": "943", "exportFilename": "IMG_6331", "title": "", "caption" : ""},
+                         {"id": "495", "largeWidth": "1200", "largeHeight": "920", "exportFilename": "IMG_6334", "title": "", "caption" : ""},
+                         {"id": "496", "largeWidth": "1200", "largeHeight": "940", "exportFilename": "IMG_6336", "title": "", "caption" : ""},
+                         {"id": "497", "largeWidth": "1200", "largeHeight": "1007", "exportFilename": "IMG_6339", "title": "", "caption" : ""},
+                         {"id": "498", "largeWidth": "1200", "largeHeight": "983", "exportFilename": "IMG_6341", "title": "", "caption" : ""},
+                         {"id": "499", "largeWidth": "1200", "largeHeight": "873", "exportFilename": "IMG_6343", "title": "", "caption" : ""},
+                         {"id": "500", "largeWidth": "1200", "largeHeight": "891", "exportFilename": "IMG_6344", "title": "", "caption" : ""},
+                         {"id": "501", "largeWidth": "1200", "largeHeight": "999", "exportFilename": "IMG_6347", "title": "", "caption" : ""},
+                         {"id": "502", "largeWidth": "1200", "largeHeight": "744", "exportFilename": "IMG_6353", "title": "", "caption" : ""},
+                         {"id": "503", "largeWidth": "1200", "largeHeight": "836", "exportFilename": "IMG_6356", "title": "", "caption" : ""},
+                         {"id": "504", "largeWidth": "1200", "largeHeight": "821", "exportFilename": "IMG_6365", "title": "", "caption" : ""},
+                         {"id": "505", "largeWidth": "775", "largeHeight": "1200", "exportFilename": "IMG_6368", "title": "", "caption" : ""},
+                         {"id": "506", "largeWidth": "1200", "largeHeight": "1056", "exportFilename": "IMG_6370", "title": "", "caption" : ""},
+                         {"id": "507", "largeWidth": "919", "largeHeight": "1200", "exportFilename": "IMG_6372", "title": "", "caption" : ""},
+                         {"id": "508", "largeWidth": "752", "largeHeight": "1200", "exportFilename": "IMG_6377", "title": "", "caption" : ""},
+                         {"id": "509", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6380", "title": "", "caption" : ""},
+                         {"id": "510", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6381", "title": "", "caption" : ""},
+                         {"id": "511", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6382", "title": "", "caption" : ""},
+                         {"id": "512", "largeWidth": "829", "largeHeight": "1200", "exportFilename": "IMG_6384", "title": "", "caption" : ""},
+                         {"id": "513", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6386", "title": "", "caption" : ""},
+                         {"id": "514", "largeWidth": "1052", "largeHeight": "1200", "exportFilename": "IMG_6389", "title": "", "caption" : ""},
+                         {"id": "515", "largeWidth": "1200", "largeHeight": "836", "exportFilename": "IMG_6391", "title": "", "caption" : ""},
+                         {"id": "516", "largeWidth": "1200", "largeHeight": "956", "exportFilename": "IMG_6393", "title": "", "caption" : ""},
+                         {"id": "517", "largeWidth": "1200", "largeHeight": "902", "exportFilename": "IMG_6394", "title": "", "caption" : ""},
+                         {"id": "518", "largeWidth": "1200", "largeHeight": "921", "exportFilename": "IMG_6395", "title": "", "caption" : ""},
+                         {"id": "519", "largeWidth": "1200", "largeHeight": "850", "exportFilename": "IMG_6396", "title": "", "caption" : ""},
+                         {"id": "520", "largeWidth": "1200", "largeHeight": "938", "exportFilename": "IMG_6399", "title": "", "caption" : ""},
+                         {"id": "521", "largeWidth": "1200", "largeHeight": "1029", "exportFilename": "IMG_6400", "title": "", "caption" : ""},
+                         {"id": "522", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6401", "title": "", "caption" : ""},
+                         {"id": "523", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6403", "title": "", "caption" : ""},
+                         {"id": "524", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6404", "title": "", "caption" : ""},
+                         {"id": "525", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6405", "title": "", "caption" : ""},
+                         {"id": "526", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6409", "title": "", "caption" : ""},
+                         {"id": "527", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6410", "title": "", "caption" : ""},
+                         {"id": "528", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6411", "title": "", "caption" : ""},
+                         {"id": "529", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6417", "title": "", "caption" : ""},
+                         {"id": "530", "largeWidth": "1200", "largeHeight": "800", "exportFilename": "IMG_6418", "title": "", "caption" : ""},
+                         {"id": "531", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6420", "title": "", "caption" : ""},
+                         {"id": "532", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6421", "title": "", "caption" : ""},
+                         {"id": "533", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6449", "title": "", "caption" : ""},
+                         {"id": "534", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6455", "title": "", "caption" : ""},
+                         {"id": "535", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6462", "title": "", "caption" : ""},
+                         {"id": "536", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6465", "title": "", "caption" : ""},
+                         {"id": "537", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6466", "title": "", "caption" : ""},
+                         {"id": "538", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6467", "title": "", "caption" : ""},
+                         {"id": "539", "largeWidth": "800", "largeHeight": "1200", "exportFilename": "IMG_6484", "title": "", "caption" : ""},
+                                    ]        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="assets/js/libs/jquery.velocity.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
